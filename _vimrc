@@ -29,15 +29,20 @@ set hlsearch
 set history=1000
 set backspace=2
 set noswapfile
+set noshowmode
+set belloff=all
+
 
 set updatetime=300
 set signcolumn=yes
+set laststatus=2
 
 call plug#begin()
 
 Plug 'tyrannicaltoucan/vim-deep-space'
+Plug 'psliwka/vim-smoothie'
 
-Plug 'vim-airline/vim-airline'
+Plug 'itchyny/lightline.vim'
 
 Plug 'honza/vim-snippets'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -53,7 +58,7 @@ call plug#end()
 set background=dark
 set termguicolors
 colorscheme deep-space
-let g:airline_theme='deep_space'
+let g:lightline = {'colorscheme': 'deepspace'}
 
 "coc
 " Use <C-l> for trigger snippet expand.
