@@ -9,7 +9,6 @@ set nocompatible
 filetype on
 filetype plugin on
 filetype indent on
-syntax on
 set cursorline
 
 
@@ -41,7 +40,7 @@ call plug#begin()
 
 Plug 'tyrannicaltoucan/vim-deep-space'
 Plug 'psliwka/vim-smoothie'
-
+Plug 'frazrepo/vim-rainbow'
 Plug 'itchyny/lightline.vim'
 
 Plug 'honza/vim-snippets'
@@ -60,6 +59,8 @@ set termguicolors
 colorscheme deep-space
 let g:lightline = {'colorscheme': 'deepspace'}
 
+let g:rainbow_active = 1
+
 "coc
 " Use <C-l> for trigger snippet expand.
 imap <C-u> <Plug>(coc-snippets-expand)
@@ -69,3 +70,5 @@ inoremap <silent><expr><C-k> coc#pum#visible() ? coc#pum#prev(1) : "\<C-k>"
 
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
+
+
