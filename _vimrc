@@ -1,3 +1,4 @@
+au GUIEnter * simalt ~x
 set guioptions -=m 
 set guioptions -=r 
 set guioptions -=T
@@ -34,7 +35,7 @@ set signcolumn=yes
 
 call plug#begin()
 
-Plug 'ghifarit53/tokyonight-vim'
+Plug 'tyrannicaltoucan/vim-deep-space'
 
 Plug 'vim-airline/vim-airline'
 
@@ -49,11 +50,10 @@ Plug 'lambdalisue/fern-hijack.vim'
 
 call plug#end()
 
+set background=dark
 set termguicolors
-
-let g:tokyonight_style = 'storm' " available: night, storm
-
-colorscheme tokyonight
+colorscheme deep-space
+let g:airline_theme='deep_space'
 
 "coc
 " Use <C-l> for trigger snippet expand.
